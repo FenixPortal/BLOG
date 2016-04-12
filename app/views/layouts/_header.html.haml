@@ -1,0 +1,8 @@
+%div{id: "header"}
+  %p All Posts
+  %div{class: "buttons"}
+    %button.button= link_to "New Post", new_post_path
+    %button.button Log Out
+- flash.each do |name, msg|
+  =content_tag(:div, msg, class: "alert")
+

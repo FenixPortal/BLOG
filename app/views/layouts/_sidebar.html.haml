@@ -1,0 +1,19 @@
+#sidebar
+  #logo
+    = link_to root_path do
+      = image_tag "logo.svg"
+  %ul
+    %li.category Website
+    %li= link_to "Blog", root_path
+    %li= link_to "About", "#"
+  %ul
+    %li.category Social
+    %li
+      %a{:href => "https://twitter.com/mackenziechild"} Twitter
+    %li
+      %a{:href => "http://instagram.com/mackenziechild"} Instagram
+    %li
+      %a{:href => "https://github.com/mackenziechild"} Github
+    %li
+      %a{:href => "mailto:hey@mackenziechild.me"} Email
+    %p.sign_in= link_to "Admin Login", "#"

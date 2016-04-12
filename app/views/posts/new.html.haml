@@ -1,14 +1,15 @@
-<h1>NEW POST</h1>
-
-<%= form_for :post, url: posts_path do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %><br>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_field :body %><br>
-  </p>
-  <br>
-  <%= f.submit %>
-<%-end-%>
+%div{class: "post_wrapper"}
+  %h1 NEW POST
+  = form_for :post, url: posts_path do |f|
+    %p
+      = f.label :title
+      %br
+        = f.text_field :title
+        %br
+    %p
+      = f.label :body
+      %br
+        = f.text_field :body
+        %br
+    %br
+      = f.submit
