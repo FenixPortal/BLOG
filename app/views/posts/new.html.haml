@@ -1,6 +1,14 @@
 %div{class: "post_wrapper"}
   %h1 NEW POST
   = form_for :post, url: posts_path do |f|
+    - if @post.errors.any?
+      #errors
+        %h2
+          = pluralize(@post.errors.count, "error")
+          prevented this post from saving:
+        %ul
+          - @post.errors.full_messages.each do |msg|
+            %li= msg
     %p
       = f.label :title
       %br
@@ -9,7 +17,7 @@
     %p
       = f.label :body
       %br
-        = f.text_field :body
+        = f.text_area :body
         %br
     %br
       = f.submit
