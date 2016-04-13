@@ -5,10 +5,10 @@
     %p About
   -else
     =link_to "Back to all posts", posts_path
-
-  %div{class: "buttons"}
-    %button.button= link_to "New Post", new_post_path
-    %button.button Log Out
+  - if user_signed_in?
+    %div{class: "buttons"}
+      %button.button= link_to "New Post", new_post_path
+      %button.button= link_to 'Sign out', destroy_user_session_path, :method => :delete
 - flash.each do |name, msg|
   =content_tag(:div, msg, class: "alert")
 

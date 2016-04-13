@@ -1,5 +1,6 @@
 %div{class: "comment clearfix"}
-  %p{style: "float: right;"}= link_to 'Delete', [comment.post, comment], method: :delete, class: "button",data: { confirm: 'Are you sure?' }
+  - if user_signed_in?
+    %p{style: "float: right;"}= link_to 'Delete', [comment.post, comment], method: :delete, class: "button",data: { confirm: 'Are you sure?' }
   %div{class: "comment_content"}
     %p{class: "comment_name"}
       %strong= comment.name

@@ -1,7 +1,6 @@
 #sidebar
-  #logo
-    = link_to root_path do
-      = image_tag "logo.svg"
+  = link_to root_path do
+    = image_tag "xoneprofile.png", id: "logo"
   %ul
     %li.category Website
     %li= link_to "Blog", root_path
@@ -9,11 +8,12 @@
   %ul
     %li.category Social
     %li
-      %a{:href => "https://twitter.com/mackenziechild"} Twitter
+      %a{:href => "https://twitter.com/jackonrails3500"} Twitter
     %li
-      %a{:href => "http://instagram.com/mackenziechild"} Instagram
+      %a{:href => "http://instagram.com/allexandresampaio"} Instagram
     %li
-      %a{:href => "https://github.com/mackenziechild"} Github
+      %a{:href => "https://github.com/allexampaio"} Github
     %li
-      %a{:href => "mailto:hey@mackenziechild.me"} Email
-    %p.sign_in= link_to "Admin Login", "#"
+      %a{:href => "mailto:allexonrails@gmail.com"} Email
+  - unless user_signed_in?
+    %p.sign_in= link_to "Admin Login", new_user_session_path

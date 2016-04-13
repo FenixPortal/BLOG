@@ -22,7 +22,7 @@ group :development do
   gem 'spring'
 end
 
-gem 'devise'
+gem 'devise','~> 3.5.6'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'haml-rails', '~> 0.9'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
