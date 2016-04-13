@@ -1,5 +1,11 @@
 %div{id: "header"}
-  %p All Posts
+  -if current_page?(root_path)
+    %p All Posts
+  -elsif current_page?(about_path)
+    %p About
+  -else
+    =link_to "Back to all posts", posts_path
+
   %div{class: "buttons"}
     %button.button= link_to "New Post", new_post_path
     %button.button Log Out

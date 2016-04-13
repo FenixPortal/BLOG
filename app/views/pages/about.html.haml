@@ -1,0 +1,16 @@
+#page_wrapper
+  #profile_image
+    = image_tag "profile.jpeg"
+  #content
+    %h1 Hey, I'm AllexOnRails
+    %p Welcome to my Blog Example based on Mackenzie Child Blog Example.
+    %p You're actually on the demo application right now. Cool stuff, right!.
+    %p
+      If you'd like to learn more of Ruby on Rails, follow Mackenzie Child on Twitter
+      %a{:href => "http://twitter.com/mackenziechild"} @MackenzieChild
+      or on the web at
+      = succeed "," do
+        %a{:href => "http://mackenziechild.me"} mackenziechild.me
+      and get my posts and exclusive content in your inbox by signing up for my newsletter
+      = succeed "." do
+        %a{:href => "http://eepurl.com/02olT"} here
